@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+    background: linear-gradient(to top,hsl(240, 73%, 65%),hsl(273, 75%, 66%));
+    height: 1000px;
+}
+.container{
+    position: relative;
+    background-color: white;
+    margin: auto;
+    width: 1000px;
+    height: 575px;
+    margin-top: 5%;
+    border-radius: 20px;
+    background-image: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position:  -90px, -570px -240px;
+}
+.img-desktop{
+    width: 140px;
+    height: 140px;
+    margin-top: 260px;
+    margin-left: -90px;
+    display: inline-block;
+}
+.img-mobile{
+    opacity: 0%;
+}
+.text{
+    position: relative;
+    margin-top: -350px;
+    margin-left: 60%;
+    width: 350px;
+}
+h1{
+  margin-bottom: 25px;  
+}
+.faq{
+    max-width: 800px;
+}
+.faq .content{
+    position: relative;
+    margin: 5px 0px;
+}
+.faq .content .question{
+    position: relative;
+    padding-top: 9px;
+    cursor: pointer;
+    color: hsl(237, 12%, 33%);
+}
+.faq .content .question::before{
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateX(-50%);
+}
+.faq .content.active .question::before{
+    content: url(./images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+}
+.faq .content.active .question{
+    font-weight: 700;
+    color: black;
+}
+.faq .content .answer{
+    position: relative;
+    padding-top: 6px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    color: hsl(240, 6%, 50%);
+}
+.faq .content.active .answer{
+    height: 50px;
+    padding-top: 10px;
+}
+@media screen and (max-width: 1140px) {
+    .container{
+        position: relative;
+        background-color: white;
+        margin: auto;
+        width: 350px;
+        height: 675px;
+        margin-top: 120px;
+        border-radius: 20px;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position:  50px 0px;
+    }
+    .img-desktop{
+        opacity: 0%;
+    }
+    .img-mobile{
+        position: absolute;
+        opacity: 100%;
+        margin-top: -110px;
+        margin-left: -29px;
+    }
+    h1{
+        text-align: center;
+    }
+    .text{
+        position: relative;
+        margin-top: -270px;
+        margin-left: 25px;
+        width: 300px;
+    }
+
+    .faq .content .question::before{
+        right: -5px;
+    }
+    .faq .content .answer{
+        padding-top: 2px;
+        font-size: 15px;
+    }
+}
+
